@@ -1,0 +1,11 @@
+version: '2'
+services:
+  mayapp-postgresql:
+    image: postgres:11.6
+    # volumes:
+    #     - ~/volumes/jhipster/mayApp/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=mayApp
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
