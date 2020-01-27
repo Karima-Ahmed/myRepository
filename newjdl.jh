@@ -1,0 +1,5 @@
+entity MyEntity{
+name String,
+age Long
+
+}

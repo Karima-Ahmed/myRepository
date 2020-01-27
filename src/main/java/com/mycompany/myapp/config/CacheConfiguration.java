@@ -57,6 +57,7 @@ public class CacheConfiguration {
             createCache(cm, com.mycompany.myapp.domain.Job.class.getName());
             createCache(cm, com.mycompany.myapp.domain.Job.class.getName() + ".tasks");
             createCache(cm, com.mycompany.myapp.domain.JobHistory.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.MyEntity.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
