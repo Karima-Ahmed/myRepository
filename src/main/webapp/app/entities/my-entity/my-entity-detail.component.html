@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="myEntity">
+            <h2><span jhiTranslate="mayApp.myEntity.detail.title">My Entity</span> {{myEntity.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="mayApp.myEntity.name">Name</span></dt>
+                <dd>
+                    <span>{{myEntity.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="mayApp.myEntity.age">Age</span></dt>
+                <dd>
+                    <span>{{myEntity.age}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/my-entity', myEntity.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
