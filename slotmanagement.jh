@@ -1,0 +1,27 @@
+entity SlotTemplate {
+	facilitatorNo Number,
+    facilitatorType Number,
+    capacity Number,
+    timeFrame Number,
+    assetType Number,
+    break Number
+}
+entity SlotInstance {
+    userId Number,
+    timeFrom Date,
+    timeTo Date,
+    assetId Number   
+}
+
+entity SlotReservationDetails {
+	applicantId Number,
+    applicantType Number,
+    status Number
+}
+relationship ManyToOne {
+  SlotInstance{tempId} to SlotTemplate
+}
+
+relationship ManyToOne {
+  SlotReservationDetails{slotId} to SlotInstance
+}
